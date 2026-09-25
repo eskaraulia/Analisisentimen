@@ -19,7 +19,7 @@ for i, teks in enumerate(ulasan_list, 1):
     except Exception:
         polaritas = blob.sentiment.polarity
 
-    # Penentuan Kategori: Positif, Negatif, dan Netral
+    # Penentuan Kategori berdasarkan Skor Polaritas (Threshold)
     if polaritas > 0.1:
         sentimen = "Positif 😊"
     elif polaritas < -0.1:
